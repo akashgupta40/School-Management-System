@@ -1,0 +1,52 @@
+
+{% include 'head.html'%}
+<center>
+<br><br>
+<h3>Profile</h3>
+{% if flag %}
+
+
+{% for i,j in rows %}
+{{i}}
+  <input type="text" name="{{i}}" value="{{j}}" required>
+<br>
+
+{% endfor %}
+<br>
+<h3>Update profile</h3>
+
+
+<form action="/update_StudentProfile/" method="POST">{% csrf_token %}
+
+
+
+ {{rows.2.0}} <input type="text" name="{{rows.2.0}}" value="{{rows.2.1}}" required>
+{{rows.3.0}}<input type="text" name="{{rows.3.0}}" value="{{rows.3.1}}" pattern="[0-9]{10}" required>
+<br>
+
+
+    <input type="Submit" value="update profile">
+
+</form>
+
+
+{% else %}
+Kindly login to see the profile
+{% endif %}
+
+
+
+<h3>Courses</h3>
+{% if flag %}
+
+
+
+{% for course in courses %}
+{% for i in course %}
+  {{i}}<br>
+{% endfor %}
+
+{% endfor %}
+
+{% endif %}
+</center>

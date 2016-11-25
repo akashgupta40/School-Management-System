@@ -1,0 +1,25 @@
+{% include 'head2.html'%}
+<center>
+{{e}}<br>
+<h3>Faculty Regisration Form</h3><br>
+
+<form action="/register_faculty/" method="POST">{% csrf_token %}
+  name&nbsp&nbsp&nbsp&nbsp
+    <input type="text" name="name" required><br><br>
+
+email&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="email" name="email" required><br><br>
+
+ Mob No&nbsp
+    <input type="tel" name="phone" pattern="[0-9]{10}"required><br><br>
+
+
+
+    password
+    <input type="password" name="password" required><br><br>
+
+
+<br>
+    <input type="Submit" value="Submit">
+
+</form>
+<center>

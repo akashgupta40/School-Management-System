@@ -1,0 +1,57 @@
+{% include 'head.html'%}
+<center>
+<h>Subject Evaluation</h><br>
+
+{% if courses %}
+<form action="/marks_subject/" method="POST">{% csrf_token %}
+course
+ <select name="course1">
+{% for i in courses %}
+<option value="{{i.0}}">{{i.0}}</option>
+
+{% endfor %}
+
+</select>
+<br>
+<br>
+    <input type="Submit" value="Submit">
+
+</form>
+
+
+
+<br><br>
+<h>Get marks in an exam Form</h><br>
+
+<form action="/marks_student/" method="POST">{% csrf_token %}
+  course
+ <select name="course">
+{% for i in courses %}
+<option value="{{i.0}}">{{i.0}}</option>
+
+{% endfor %}
+
+</select>
+<br>
+
+</select><br>
+  exam_type
+    <select name="exam_type">
+    <option value=quarterly>quarterly</option>
+    <option value="halfyearly">halfyearly</option>
+    <option value="final">final</option>
+</select>
+
+
+
+
+<br>
+    <input type="Submit" value="Submit">
+
+</form>
+
+{% else %}
+<br><h5>You are not registered for any course</h5>
+{% endif %}
+
+</center>

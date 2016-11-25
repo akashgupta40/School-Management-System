@@ -1,0 +1,41 @@
+{% include 'head.html'%}
+<center>
+<br><br>
+{{a}}<br>
+{{e}}<br>
+<h3>Feedback</h3><br>
+
+{% if v %}
+
+<form action="/feedback_student/" method="POST">{% csrf_token %}
+course
+ <select name="course">
+{% for i in courses %}
+<option value="{{i.0}}">{{i.0}}</option>
+
+{% endfor %}
+
+</select>
+<br>
+faculty
+ <select name="faculty">
+{% for i in faculties %}
+<option value="{{i.0}}">{{i.0}}</option>
+
+{% endfor %}
+
+</select>
+<br>
+  feedback<br>
+    <textarea type="message" name="feedback" required></textarea><br>
+<br>
+    <input type="Submit" value="Submit feedback">
+
+</form>
+{% else %}
+<h5>You are not enrolled for any course.Thus no feedback can be given.</h5>
+
+{% endif %}
+</center>
+
+

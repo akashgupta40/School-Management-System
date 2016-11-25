@@ -1,0 +1,73 @@
+{% include 'head2.html'%}
+<center>
+<h4>{{e}}{{post}}</h4><br>
+<h3>COurse Registration Form</h3><br>
+<form action="/faculty_class_course/" method="POST">{% csrf_token %}
+
+class
+ <select name="class">
+  <option value="1">nursery</option>
+  <option value="2">lkg</option>
+  <option value="3">hkg</option>
+  <option value="4">I</option>
+<option value="5">II</option>
+  <option value="6">III</option>
+  <option value="7">IV</option>
+  <option value="8">V</option>
+<option value="9">VI</option>
+<option value="10">VII</option>
+  <option value="11">VIII</option>
+  <option value="12">IX</option>
+  <option value="13">X</option>
+<option value="14">XI</option>
+  <option value="15">XII</option>
+</select>
+
+
+course
+ <select name="course">
+
+<option value="english"> english</option>
+<option value="hindi">hindi </option>
+<option value="maths"> maths</option>
+<option value="physics">physics </option>
+<option value="chemistry"> chemistry</option>
+<option value="biology">biology </option>
+<option value="history">history </option>
+<option value="civics"> civics</option>
+<option value="geography"> geography</option>
+<option value="computer">computer </option>
+<option value="sanskrit"> sanskrit</option>
+<option value="social science"> social science</option>
+<option value="science">science </option>
+<option value="drawing">drawing </option>
+<option value="moral science">moral science </option>
+<option value="general knowledge">general knowledge </option>
+<option value="physical education"> physical education</option>
+<option value="environmental studies">environmental studies </option>
+<option value="english dictation">english dictation </option>
+<option value="hindi dictation">hindi dictation </option>
+<option value="maths dodging">maths dodging </option>
+<option value="physical education"> physical education</option>
+
+
+
+</select>
+
+Exam Type
+ <select name="exam_type">
+<option value="quarterly"> Quarterly</option>
+<option value="halfyearly"> Halfyearly</option>
+<option value="final">Final </option>
+</select>
+
+
+
+    <input type="Submit" value="Submit">
+
+</form>
+
+<br><br>
+<h3><a href="/home/" style="color:white">Proceed Further</a></h3>
+
+</center>

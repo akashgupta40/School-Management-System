@@ -1,0 +1,31 @@
+{% include 'head.html'%}
+<center>
+{{p}}{{e}}<br>
+
+
+{% for map in maps %}
+<h3>{{map.0}}</h3><br>
+
+<form action="/{{map.0}}_insert/" method="POST">{% csrf_token %}
+<h4>Insertion</h4>
+{% for col in map.1 %}
+{{col}}<input type="text" name="{{col}}" ><br>
+{% endfor %}
+
+<input type="submit" value="submit" ><br>
+</form>
+
+
+
+<form action="/{{map.0}}_delete/" method="POST">{% csrf_token %}
+<h4>Deletion</h4>
+{% for col in map.1 %}
+{{col}}<input type="text" name="{{col}}" ><br>
+{% endfor %}
+
+<input type="submit" value="submit" ><br>
+</form>
+
+<br><br>
+{% endfor %}
+</center>

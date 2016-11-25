@@ -1,0 +1,48 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "css/homee.css" %}" />
+
+{% if student %}
+
+	<ul>
+	<li><a href="#">{{user.first_name}}</a></li>
+	<li><a href="#">{{user.last_name}}</a></li>
+<li><a href="/notice_student/">Noticeboard & Assignments</a></li>
+<li><a href="/profile_student/">Profile</a></li>
+<li><a href="/marks_student/">Get marks</a></li>
+<li><a href="/feedback_student/">Give feedback</a></li>
+<li><a href=/assignment_submit/>Submit Assignment</a></li>
+<li><a href="/timetable/">Time Table</a></li>
+<li><a href="/change_pwd/">Change password</a></li>
+<li><a href=/logout/>Logout</a></li>
+	</ul>
+<br><br><br><h3>Welcome to the dashboard,{{user.first_name}} </h3>
+{% elif faculty %}
+<ul>
+	<li><a href="#">{{user.first_name}}</a></li>
+	<li><a href="#">{{user.last_name}}</a></li>
+	<li><a href="#">{{user.username}}</a></li>
+<li><a href="/notice_faculty/">Notice for class</a></li>
+<li><a href="/profile_faculty/">Profile</a></li>
+<li><a href="/marks_faculty/">Feed marks</a></li>
+<li><a href="/assignment_faculty/">Post Assignment</a></li>
+<li><a href="/faculty_class_course/">Register courses</a></li>
+<li><a href="/change_pwd/">Change password</a></li>
+<li><a href=/logout/>Logout</a></li>
+<li><a href="/faculty_class_course_time/">Set class in time Table</a></li>
+</ul>
+<br><br><br><h3>Welcome to the dashboard,{{user.first_name}} </h3>
+{% else %}
+<ul>
+<li><a href="/login_student/">Student Login</a></li>
+<li><a href="/login_faculty/">Faculty Login</a></li>
+<li><a href="/register_student/">Register as student</a></li>
+<li><a href="/register_faculty/">Register as faculty</a></li>
+</ul>
+<br><br><br><br><br><div style="font-size:30px"><center><h1>Welcome to our School </h1></center></div>
+{% endif %}
+
+<h3>{{post}}</h3>
+<h3>{{e}}</h3><br>
+
+
+

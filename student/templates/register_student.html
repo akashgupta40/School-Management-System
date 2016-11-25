@@ -1,0 +1,49 @@
+{% include 'head.html'%}
+<center>
+{{e}}<br>
+<h3>Regisration Form</h3><br>
+{% if flag %}
+{{e}}
+{% endif %}
+
+<form action="/register_student/" method="POST">{% csrf_token %}
+  name &nbsp&nbsp&nbsp
+    <input type="text" name="name" required><br><br>
+
+email&nbsp&nbsp&nbsp&nbsp&nbsp<input type="email" name="email"><br><br>
+
+ Mob No
+    <input type="tel" name="phone" pattern="[0-9]{10}"required><br><br>
+
+    Reg No.
+    <input type="number" name="username"required><br><br>
+
+
+    password
+    <input type="password" name="password" required><br><br>
+
+
+
+class(only for students)
+ <select name="class">
+  <option value="1">nursery</option>
+  <option value="2">lkg</option>
+  <option value="3">hkg</option>
+  <option value="4">I</option>
+<option value="5">II</option>
+  <option value="6">III</option>
+  <option value="7">IV</option>
+  <option value="8">V</option>
+<option value="9">VI</option>
+<option value="10">VII</option>
+  <option value="11">VIII</option>
+  <option value="12">IX</option>
+  <option value="13">X</option>
+<option value="14">XI</option>
+  <option value="15">XII</option>
+</select>
+<br><br>
+    <input type="Submit" value="Submit">
+
+</form>
+</center>

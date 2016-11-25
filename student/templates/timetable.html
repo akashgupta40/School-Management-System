@@ -1,0 +1,31 @@
+{% include 'head.html'%}
+<center>
+
+<br>
+<h5>{{e}}</h5>
+<table>
+
+<!-- <thead> -->
+<tr>
+	<th>Period &nbsp</th>
+	<th>Day</th>
+	<th>Course &nbsp</th>
+
+</tr>
+</thead><!-- 
+ -->
+<tbody>
+    {% for tt in tts %}
+{% for i in tt %}
+<tr>
+
+	{% for j in i %}
+	<td>{{ j }}</td>
+
+{% endfor %}
+</tr>	
+{% endfor %}
+    {% endfor %}
+     </tbody>
+  </table>
+</center>

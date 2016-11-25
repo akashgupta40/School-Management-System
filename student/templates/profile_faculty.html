@@ -1,0 +1,46 @@
+
+{% include 'head2.html'%}
+<center>
+{{e}}
+
+<h3>Profile</h3>
+{% if flag %}
+
+
+<table>
+<tbody>
+{% for i,j in rows %}
+<tr>
+
+<td>{{i}}</td>
+<td>{{j}}</td>
+  
+
+</tr>
+{% endfor %}
+<tbody>
+</table>
+<br>
+<h3>Update profile</h3>
+
+<form action="/update_FacultyProfile/" method="POST">{% csrf_token %}
+
+
+{{rows.3.0}}
+  <input type="text" name="{{rows.3.0}}" value="{{rows.3.1}}" pattern="[0-9]{10}" required>
+<br>
+
+
+    <input type="Submit" value="update profile">
+
+</form>
+
+
+{% else %}
+Kindly login to see the profile
+{% endif %}
+
+
+<br><br>
+</center>
+

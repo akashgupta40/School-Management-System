@@ -1,0 +1,45 @@
+{% include 'head.html'%}
+<center>
+<h>See feedback of faculties</h><br>
+
+{% if v %}
+<form action="/principal_feedback/" method="POST">{% csrf_token %}
+faculty
+ <select name="name">
+{% for i in faculties %}
+<option value="{{i.0}}">{{i.0}}</option>
+
+{% endfor %}
+
+</select>
+<br>
+<br>
+    <input type="Submit" value="Submit">
+
+</form>
+
+
+
+
+
+{% else %}
+<br><h5>No faculties are registered</h5>
+{% endif %}
+
+
+{% if t %}
+
+Feedback of {{name}}<br>
+<table>
+{% for i in feedbacks %}
+<tr>
+<td>{{i.0}}</td>
+</tr>
+
+{% endfor %}
+</table>
+
+
+
+{% endif %}
+</center>

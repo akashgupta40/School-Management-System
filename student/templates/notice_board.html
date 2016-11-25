@@ -1,0 +1,31 @@
+{% include 'head.html'%}
+
+<!-- Header -->
+<header id="header" class="alt">
+
+</header>
+
+
+ <table class="table">
+
+    <thead>
+      <tr>
+        <th>Notice id</th>
+       <th>Notice info</th>
+<th>faculty Name</th>
+
+      </tr>
+    </thead>
+ <tbody> 
+
+    {% for notice in notices %}
+<tr>
+
+	{% for j in notice %}
+	<td>{{ j }}</td>
+
+{% endfor %}
+</tr>	
+    {% endfor %}
+     </tbody>
+  </table>

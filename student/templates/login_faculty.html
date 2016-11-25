@@ -1,0 +1,16 @@
+{% include 'head2.html'%}
+<center>
+<h3>Faculty Login Form</h3>
+<form action="/login_faculty/" method="POST">{% csrf_token %}
+    Facuty email<br>
+    <input type="email" name="email" required><br><br>
+    password<br>
+    <input type="password" name="password" required><br><br>
+
+     <input type="radio" name="user_type" value="faculty" checked> Faculty<br>
+  
+<br>
+    <input type="Submit" value="Submit">
+
+</form>
+</center>

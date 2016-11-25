@@ -1,0 +1,43 @@
+{% include 'head2.html'%}
+<center>
+{{e}}
+
+<h>Post Notice</h><br>
+
+
+
+
+
+<br><br>
+
+
+<form action="/notice_faculty/" method="POST">{% csrf_token %}
+  notice
+    <textarea type="text" name="info" required></textarea><br>
+
+class to be notified
+ <select name="class_id">
+  <option value="1">nursery</option>
+  <option value="2">lkg</option>
+  <option value="3">hkg</option>
+  <option value="4">I</option>
+<option value="5">II</option>
+  <option value="6">III</option>
+  <option value="7">IV</option>
+  <option value="8">V</option>
+<option value="9">VI</option>
+<option value="10">VII</option>
+  <option value="11">VIII</option>
+  <option value="12">IX</option>
+  <option value="13">X</option>
+<option value="14">XI</option>
+  <option value="15">XII</option>
+</select>
+
+<br>
+    <input type="Submit" value="Submit">
+
+</form>
+
+<h3>{{post}}</h3>
+</center>

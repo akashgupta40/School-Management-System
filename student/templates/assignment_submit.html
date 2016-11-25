@@ -1,0 +1,35 @@
+{% include 'head.html'%}
+<center>
+<br><br>
+{{a}}<br>
+{{e}}<br>
+<h3>Submit Assignment</h3><br>
+<h5>It may not send mail to respective teacher as password should be first set in emailinfo file and google permission also required.</h5>
+{% if v %}
+
+<form action="/assignment_submit/" method="POST">{% csrf_token %}
+
+
+faculty
+ <select name="faculty">
+{% for i in faculties %}
+<option value="{{i.0}}">{{i.0}}</option>
+
+{% endfor %}
+
+</select>
+<br>
+  Assignment<br>
+    <textarea type="message" name="assignment" required></textarea><br>
+<br>
+    <input type="Submit" value="Submit assignment">
+
+</form>
+{% else %}
+<h5>You are not enrolled for any course.Thus no feedback can be given.</h5>
+
+{% endif %}
+</center>
+
+
+

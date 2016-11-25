@@ -1,0 +1,45 @@
+AKASH GUPTA
+14074002
+
+Django 1.9 version used.
+database name= school2
+
+Faculties will register on the portal with their unique email id .
+Then they will be asked to add the courses taught by them to the respective classes for respctive exam types(quarterly,half-yearly,final).
+After feeding all the classes,faculties will proceed further to dashboard
+They can feed marks of students for a particular course.
+Faculties can set classes to the time table too.
+
+Student will login by their reg no issued by school.
+
+All users can change password
+
+Teachers
+username/email:seemasharma@gmail.com   password:seemasharma@gmail.com
+username/email:vandanarana@gmail.com   password:vandanarana@gmail.com
+
+
+Students
+Reg No:1   password:1 class:5
+Reg No:2   password:2 class:5
+Reg No:3   password:3 class:5
+
+
+
+Links for principal are hidden.
+Principal
+login at
+http://127.0.0.1:8000/admin/
+
+username: admin
+password: akash123
+
+Registrations of every user can be seen by principal.
+last_name field denotes the user_type
+
+Principal can view feedback at
+http://127.0.0.1:8000/principal_feedback
+Note:FIrst principal has to login at above link and then only he can view feedbacks
+
+for sending assigment to teachers,email id password and permission from gmail is required,or else it won't work
+

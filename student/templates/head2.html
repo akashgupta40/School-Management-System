@@ -1,0 +1,31 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "css/homee.css" %}" />
+{% if flag %}
+<ul>
+	<li><a href="#">{{user.first_name}}</a></li>
+	<li><a href="#">{{user.last_name}}</a></li>
+	<li><a href="#">{{user.username}}</a></li>
+<li><a href="/notice_faculty/">Notice for class</a></li>
+<li><a href="/profile_faculty/">Profile</a></li>
+<li><a href="/marks_faculty/">Feed marks</a></li>
+<li><a href="/assignment_faculty/">Post Assignment</a></li>
+<li><a href="/faculty_class_course/">Register courses</a></li>
+<li><a href="/change_pwd/">Change password</a></li>
+<li><a href=/logout/>Logout</a></li>
+<li><a href="/faculty_class_course_time/">Set class in time Table</a></li>
+</ul>
+
+
+{% else %}
+
+<ul>
+<li><a href="/login_student/">Student Login</a></li>
+<li><a href="/login_faculty/">Faculty Login</a></li>
+<li><a href="/register_student/">Register as student</a></li>
+<li><a href="/register_faculty/">Register as faculty</a></li>
+</ul>
+{% endif %}
+<br><h3>{{post}}</h3>
+<h3>{{e}}</h3>
+
+

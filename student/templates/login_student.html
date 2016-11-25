@@ -1,0 +1,17 @@
+{% include 'head.html'%}
+<center>
+<h4>{{e}}</h4><br>
+<h3>Student Login Form</h3><br>
+<form action="/login_student/" method="POST">{% csrf_token %}
+    Reg No&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="number" name="username" required><br><br>
+    password
+    <input type="password" name="password" required><br><br>
+
+     <input type="radio" name="user_type" value="student" checked> Student<br>
+  
+<br>
+    <input type="Submit" value="Submit">
+
+</form>
+</center>

@@ -1,0 +1,36 @@
+{% include 'head.html'%}
+<center>
+<br>
+<h5>{{e}}</h5><br>
+
+{% if marks %}
+<table class="table">
+
+    <thead>
+      <tr>
+        <th>Course</th>
+       <th>Exam type</th>
+        <th>marks</th>
+
+      </tr>
+    </thead>
+ <tbody> 
+
+    {% for mark in marks %}
+<tr>
+
+	{% for j in mark %}
+<td>{{course }}</td>
+<td>{{ exam_type }}</td>
+	<td>{{ j }}</td>
+
+{% endfor %}
+</tr>	
+    {% endfor %}
+     </tbody>
+  </table>
+{% else %}
+
+<h5>No records to display</h5>
+{% endif %}
+</center>

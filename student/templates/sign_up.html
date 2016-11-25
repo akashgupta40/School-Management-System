@@ -1,0 +1,15 @@
+<head>Register Form</head>
+<form action="{% url 'sign_up' %}" method="POST">{% csrf_token %}
+    Id:<br>
+    <input type="number" name="id"><br>
+    Name:<br>
+    <input type="text" name="name"><br>
+    Address:<br>
+    Street No.: <input type="number" name="street"><br>
+    zip code: <input type="number" name="zip"><br>
+    city: <input type="text" name="city"><br>
+    password:<br> 
+    <input type="password" name="password"><br>
+    <input type="Submit" value="Submit">
+
+</form>

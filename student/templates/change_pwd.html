@@ -1,0 +1,15 @@
+<center>
+<head>Change Your password</head>
+<form action="/change_pwd/" method="POST">{% csrf_token %}
+ <!--    Old password<br>
+    <input type="password" name="old" required><br> -->
+    New password<br>
+    <input type="password" name="new" required><br>
+
+    
+  
+
+    <input type="Submit" value="Change password">
+
+</form>
+</center>

@@ -1,0 +1,49 @@
+{% include 'head2.html'%}
+<center>
+<h3>{{e}}</h3>
+
+{% if v %}
+
+<h>Enter the marks of student here</h><br>
+
+
+
+
+
+<br><br>
+
+
+<form action="/marks_faculty/" method="POST">{% csrf_token %}
+course
+ <select name="course">
+{% for i in courses %}
+<option value="{{i.0}}">{{i.0}}</option>
+
+{% endfor %}
+
+</select><br>
+  exam_type
+    <select name="exam_type">
+    <option value=quarterly>quarterly</option>
+    <option value="halfyearly">halfyearly</option>
+    <option value="final">final</option>
+</select>
+
+    <br>
+
+    student_id
+    <input type="number" name="student_id" required><br>
+        marks
+    <input type="number" name="marks" required><br>
+
+
+<br>
+    <input type="Submit" value="Enter marks">
+
+</form>
+
+<h3>{{post}}</h3>
+{% else %}
+<h1>No courses taught by you are registered.</h1>
+{% endif %}
+</center>
